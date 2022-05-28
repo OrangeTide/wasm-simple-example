@@ -1,12 +1,16 @@
-# Orange PC
+# Simple WASM Example
 
 ## Introduction
 
-## Development
+This demonstrats how to use clang to generate WASM binaries without using
+Emscripten. There are distinct disadvantages to doing this, but for
+demonstration and understand it is a useful exercise.
+
+## Development Workflow and Tips
 
 ### Prerequisites
 
-TBD: (llvm, clang, wabt, etc)
+(TODO: install llvm, clang, wabt, etc)
 
 ### Building
 
@@ -14,7 +18,13 @@ TBD: (llvm, clang, wabt, etc)
 make
 ```
 
-### Running in development
+### Running in Development
+
+Hosting your WASM and HTML files through a small webserver is ideal. As out-of-the-box most browsers have security protections when it comes to accessing directly from the file-system.
+
+A simple static webserver is all that you need to begin development with WASM. One choice is the single-file althttpd from the SQLite project.
+
+#### Althttpd
 
 Download `althttpd.c` from https://sqlite.org/althttpd/doc/trunk/althttpd.md and build it. For example:
 
@@ -44,6 +54,10 @@ wasm2wat opc.wasm
 
 ### Contributing
 
-TBD: (sending a merge request, etc)
+Bug reports, suggetions, and feature requests can be reported as issues using Github.
 
+Code changes are preferrable to issues. To submit your changes to this project:
 
+Fork this repo. Create a branch that describes your change. Push your branch. Create a Pull Request on Github. Contact me once a week/month until I respond.
+
+You must agree to copyright and license identical to the terms described in the file `LICENSE`.
